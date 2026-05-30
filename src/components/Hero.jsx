@@ -25,7 +25,7 @@ function Hero() {
           <img
             src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop"
             alt="Doctor"
-            className="rounded-3xl shadow-lg"
+            className="shadow-lg"
           />
         </div>
       </div>
