@@ -137,8 +137,8 @@ code {
   z-index: 1;
   max-width: 850px;
   text-align: left;
-  padding-left: 50px;
-  padding-top: 50px;
+  left: 50px;
+  top: 150px;
 }
 .hero-text-contnr h1, .hero-text-contnr p {
   color: #fff;
