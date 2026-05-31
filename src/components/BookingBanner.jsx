@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import AppointmentModal from './AppointmentModal'
 
 function BookingBanner() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className="py-16 bg-blue-600 text-white text-center">
       <div className="max-w-4xl mx-auto px-6">
@@ -32,13 +36,26 @@ function BookingBanner() {
           viewport={{ amount: 0.4 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Link
+          {/* <Link
+          onClick={() => setShowModal(true)}
             to="/appointment"
             className="inline-block mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold"
           >
             Book Now
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-block mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold"
+          >
+            Book Now
+          </button>
         </motion.div>
+
+        {showModal && (
+          <AppointmentModal
+            onClose={() => setShowModal(false)}
+          />
+        )}
 
       </div>
     </section>

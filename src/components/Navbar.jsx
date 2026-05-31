@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import AppointmentModal from "./AppointmentModal";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,7 @@ function Navbar() {
   }, []);
 
   return (
+    <>
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -50,15 +53,27 @@ function Navbar() {
           <Link to="/doctors" className="hover:text-blue-600 transition">
             Doctors
           </Link>
-          <Link to="/appointment" className="hover:text-blue-600 transition">
+          {/* <Link to="/appointment" className="hover:text-blue-600 transition" onClick={() => setShowModal(true)}>
             Appointment
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => setShowModal(true)}
+            className="hover:text-blue-600 transition cursor-pointer"
+          >
+            Appointment
+          </button>
           <Link to="/contact" className="hover:text-blue-600 transition">
             Contact
           </Link>
         </div>
       </div>
     </motion.nav>
+    {showModal && (
+      <AppointmentModal
+        onClose={() => setShowModal(false)}
+      />
+    )}
+    </>
   );
 }
 
