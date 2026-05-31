@@ -80,7 +80,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  /* color: var(--text-h); */
 }
 
 h1 {
@@ -93,7 +93,6 @@ h1 {
   }
 }
 h2 {
-  font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
@@ -118,4 +117,35 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/*===custom css ======*/
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.59);
+}
+.hero-banner-main-contnr {
+  position: relative;
+}
+
+.hero-text-contnr {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.hero-text-contnr h1, .hero-text-contnr p {
+  color: #fff;
+}
+.hero-banner img {
+  width: 100%;
+  background-image: url('/assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
