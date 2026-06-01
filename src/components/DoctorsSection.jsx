@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import doctors from '../data/doctorsData'
 import DoctorCard from './DoctorCard'
 
@@ -11,7 +12,18 @@ function DoctorsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {doctors.map((doctor) => (
-            <DoctorCard key={doctor.id} doctor={doctor} />
+            <motion.div
+              key={doctor.id}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: doctor.id * 0.15
+              }}
+            >
+              <DoctorCard key={doctor.id} doctor={doctor} />
+            </motion.div>
           ))}
         </div>
       </div>
