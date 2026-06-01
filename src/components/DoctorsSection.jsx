@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import doctors from '../data/doctorsData'
 import DoctorCard from './DoctorCard'
 
@@ -22,7 +23,9 @@ function DoctorsSection() {
                 delay: doctor.id * 0.15
               }}
             >
-              <DoctorCard key={doctor.id} doctor={doctor} />
+              <Link to={`/doctor/${doctor.id}`}>
+                <DoctorCard key={doctor.id} doctor={doctor} />
+              </Link>
             </motion.div>
           ))}
         </div>
