@@ -1,5 +1,5 @@
 // import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import AppointmentModal from './AppointmentModal'
 
@@ -51,11 +51,18 @@ function BookingBanner() {
           </button>
         </motion.div>
 
-        {showModal && (
+        {/* {showModal && (
           <AppointmentModal
             onClose={() => setShowModal(false)}
           />
-        )}
+        )} */}
+        <AnimatePresence>
+          {showModal && (
+            <AppointmentModal
+              onClose={() => setShowModal(false)}
+            />
+          )}
+        </AnimatePresence>
 
       </div>
     </section>

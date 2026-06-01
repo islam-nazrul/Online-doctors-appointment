@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import AppointmentModal from "./AppointmentModal";
 
 function Navbar() {
@@ -68,11 +68,18 @@ function Navbar() {
         </div>
       </div>
     </motion.nav>
-    {showModal && (
+    {/* {showModal && (
       <AppointmentModal
         onClose={() => setShowModal(false)}
       />
-    )}
+    )} */}
+    <AnimatePresence>
+      {showModal && (
+        <AppointmentModal
+          onClose={() => setShowModal(false)}
+        />
+      )}
+    </AnimatePresence>
     </>
   );
 }
