@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import doctors from '../data/doctorsData'
 import DoctorCard from '../components/DoctorCard'
 
@@ -11,7 +12,9 @@ function Doctors() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {doctors.map((doctor) => (
-            <DoctorCard key={doctor.id} doctor={doctor} />
+            <Link to={`/doctor/${doctor.id}`}>
+              <DoctorCard key={doctor.id} doctor={doctor} />
+            </Link>
           ))}
         </div>
       </div>

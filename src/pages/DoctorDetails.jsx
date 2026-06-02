@@ -28,7 +28,7 @@ function DoctorDetail() {
         </div>
 
         {/* Right Content */}
-        <div className="flex-1 border border-gray-300 rounded-xl p-6">
+        <div className="flex-1 border border-gray-300 rounded-xl p-6 text-left">
           <h1 className="text-3xl font-bold mb-2">
             {doctor.name}
           </h1>
