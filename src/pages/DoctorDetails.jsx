@@ -29,11 +29,11 @@ function DoctorDetail() {
 
         {/* Right Content */}
         <div className="flex-1 border border-gray-300 rounded-xl p-6 text-left">
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-3xl font-bold mb-2 text-gray-800">
             {doctor.name}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-3 mb-5">
+          <div className="flex flex-wrap items-center gap-3 mb-5 text-gray-800">
             <span className="text-gray-600">
               {doctor.degree}
             </span>
@@ -47,11 +47,11 @@ function DoctorDetail() {
             About
           </h3>
 
-          <p className="text-gray-600 leading-7">
+          <p className="text-gray-600 leading-7 text-gray-800">
             {doctor.about}
           </p>
 
-          <p className="mt-5 text-lg">
+          <p className="mt-5 text-lg text-gray-800">
             Appointment Fee :
             <span className="font-bold ml-2">
               ₹{doctor.fee}
@@ -63,7 +63,7 @@ function DoctorDetail() {
       {/* Booking Slots */}
       <div className="mt-10">
 
-        <h2 className="text-xl font-semibold mb-5">
+        <h2 className="text-xl font-semibold mb-5 text-gray-800">
           Booking Slots
         </h2>
 
@@ -74,7 +74,7 @@ function DoctorDetail() {
             (day, index) => (
               <button
                 key={index}
-                className="min-w-[80px] h-[90px] border rounded-full flex flex-col items-center justify-center hover:bg-blue-600 hover:text-white transition"
+                className="min-w-[80px] h-[90px] border rounded-full flex flex-col items-center justify-center hover:bg-blue-600 hover:text-white transition text-gray-800"
               >
                 <span>{day}</span>
                 <span>{index + 4}</span>
@@ -98,7 +98,7 @@ function DoctorDetail() {
           ].map((time) => (
             <button
               key={time}
-              className="border rounded-full px-6 py-2 whitespace-nowrap hover:bg-blue-600 hover:text-white transition"
+              className="border rounded-full px-6 py-2 whitespace-nowrap hover:bg-blue-600 hover:text-white transition text-gray-800"
             >
               {time}
             </button>

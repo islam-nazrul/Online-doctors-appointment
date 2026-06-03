@@ -70,7 +70,7 @@ function Speciality() {
             Medical Specialties
           </h2>
 
-          <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {specialties.map((item) => (
               <div
                 key={item.id}
