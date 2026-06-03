@@ -66,16 +66,16 @@ function Speciality() {
     <>
       <section className="bg-slate-200 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
             Medical Specialties
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((item) => (
               <div
                 key={item.id}
                 className="bg-white rounded-lg shadow-sm p-8 text-center
-                          hover:bg-teal-600 hover:text-white
+                          hover:bg-blue-600 hover:text-white
                           transition-all duration-300 cursor-pointer"
               >
                 <div className="text-5xl mb-4 flex justify-center">
