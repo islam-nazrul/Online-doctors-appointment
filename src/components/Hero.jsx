@@ -12,7 +12,7 @@ function Hero() {
       <div className="mx-auto px-6 grid gap-10 items-center relative">
         <div className="absolute inset-0 bg-black/60">
           <div className="hero-text-contnr">
-            <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight"
+            <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight text-white"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -20,7 +20,7 @@ function Hero() {
               Book Appointment With Trusted Doctors
             </motion.h1>
 
-            <motion.p className="mt-6 text-gray-600 text-sm"
+            <motion.p className="mt-6 text-gray-600 text-sm text-white"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -67,7 +67,7 @@ function Hero() {
           <img
             src="./src/assets/hero_banner.jpg"
             alt="Doctor"
-            className="shadow-lg"
+            className="shadow-lg w-full object-cover object-center"
           />
         </div>
       </div>
